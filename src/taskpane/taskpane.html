@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TrExcel</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Titillium+Web&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Template styles -->
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <span style="color: black">Tr</span><span style="color: green">Excel</span>
+      </h1>
+    </header>
+    <main id="loading-msg" style="display: flex;">
+      <p>Loading...</p>
+      <div class="loader"></div>
+    </main>
+    <main id="app-body" style="display: none; flex-direction: column;">
+      <section id="game-panel">
+        <div id="game-over-message" style="display: none; flex-direction: column;">
+          <h2>Game over!</h2>
+          <h3>Your score was: <span id="score-container"></span></h3>
+        </div>
+
+        <div id="button-container">
+          <button type="button" id="start-game-button">New game</button>
+          <button type="button" id="pause-game-button" style="display: none;">Pause</button>
+          <button type="button" id="resume-game-button" style="display: none;">Continue</button>
+        </div>
+      </section>
+      <section id="controls">
+        <h2>How to play</h2>
+        <ul>
+          <li>Clear rows using the colourful pieces, just like how Microsoft Excel clears away all your troubles.</li>
+          <li>
+            Don't let the rows reach the top of the game board, just like how you don't let anyone diss Microsoft Excel.
+          </li>
+          <li>Fill rows completely to clear them, just like how Microsoft Excel fills you with joy.</li>
+          <li>Clear multiple rows at once to get more points, just like how Microsoft Excel gives you more stuff.</li>
+          <li>
+            Microsoft Excel has as many cool things as a rainbow has colours (at least 5), so clear rows with many
+            colours to get even more points!
+          </li>
+        </ul>
+        <h2>Controls</h2>
+        <ul>
+          <li><span class="keyboard-key">←</span>: move the piece left.</li>
+          <li><span class="keyboard-key">→</span>: move the piece right.</li>
+          <li><span class="keyboard-key">↓</span>: move the piece down.</li>
+          <li><span class="keyboard-key">space</span>: drop the piece like it's hot.</li>
+          <li>
+            <span class="keyboard-key">↑</span> or <span class="keyboard-key">X</span>: rotate the piece clockwise.
+          </li>
+          <li>
+            <span class="keyboard-key">ctrl</span> or <span class="keyboard-key">Z</span>: rotate the piece
+            counterclockwise.
+          </li>
+          <li><span class="keyboard-key">S</span>: rotate the piece 180 degrees.</li>
+          <li>
+            <span class="keyboard-key">D</span>: change the piece's colour, just like how Microsoft Excel changes your
+            life.
+          </li>
+          <li><span class="keyboard-key">shift</span> or <span class="keyboard-key">C</span>: pocket the piece.</li>
+          <li><span class="keyboard-key">P</span>: pause/resume the game.</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
